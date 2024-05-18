@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Power - E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showSection('home')">
+    <header>
+        <h1>Protein Power</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="navigateTo(event, 'home')">Home</a></li>
+                <li><a href="#about" onclick="navigateTo(event, 'about')">About</a></li>
+                <li><a href="#services" onclick="navigateTo(event, 'services')">Services</a></li>
+                <li><a href="#contact" onclick="navigateTo(event, 'contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to Protein Power! Your one-stop shop for the best protein powders.</p>
+            <div class="image-grid">
+                <img src="images/asitis.jpg" alt="Protein Powder 1">
+                <img src="images/atom.jpg" alt="Protein Powder 2">
+                <img src="images/avvtar.jpg" alt="Protein Powder 3">
+                <img src="images/BM.webp" alt="Protein Powder 4">
+                <img src="images/GNC.webp" alt="Protein Powder 5">
+                <img src="images/impact.webp" alt="Protein Powder 6">
+                <img src="images/muscletech.avif" alt="Protein Powder 7">
+                <img src="images/ON.webp" alt="Protein Powder 8">
+            </div>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>We are dedicated to providing the highest quality protein supplements to help you achieve your fitness goals. Whether you're an athlete striving for peak performance, a fitness enthusiast looking to maintain a healthy lifestyle, or someone embarking on a weight loss journey, our products are crafted to support you every step of the way. Our extensive range of protein powders includes options for building muscle, enhancing recovery, and promoting overall wellness. Each product is meticulously tested to ensure it meets the highest standards of quality and effectiveness. Join our community of health-conscious individuals who trust Protein Power to fuel their bodies with the best nutrition possible. Discover the difference with our premium protein supplements and take your fitness journey to the next level.</p>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>We offer a variety of protein powders tailored to your needs. Whether you're looking to build muscle, lose weight, or maintain a healthy lifestyle, we have the right product for you. Our diverse selection ensures that you'll find the perfect supplement to support your fitness journey. With our high-quality ingredients and effective formulations, achieving your fitness goals has never been easier.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required><br><br>
+                <label for="emailAddress">Email Address *</label>
+                <input type="email" id="emailAddress" name="emailAddress" required><br><br>
+                <h2>GET IN TOUCH WITH US</h2>
+                <label for="message">Write your Message *</label>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <label for="mobileNumber">Mobile Number *</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" required><br><br>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city"><br><br>
+                <input type="submit" value="SUBMIT">
+            </form>
+            <div id="thankYouMessage" style="display:none;">
+                <h2>Thank You!</h2>
+                <p>Thank you for getting in touch with us. We will respond to your message shortly.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Protein Power</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

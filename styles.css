@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Change the background color */
+}
+
+header {
+    background-color: #333; /* Change the header background color */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Arial Black', sans-serif; /* Change the font family */
+    font-size: 2rem; /* Optional: Adjust the font size */
+}
+
+nav {
+    background-color: #555; /* Change the navigation background color */
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333; /* Change the hover text color */
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #fff; /* Change the section background color */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #555; /* Change the footer background color */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About section styling */
+#about {
+    background: url('images/bannerr.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Services section styling */
+#services {
+    background-color: #f4f4f4;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#services p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Contact section form styling */
+#contact {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgb(196, 189, 189);
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#contact form label {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact form h2 {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+#contact form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#thankYouMessage {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    box-shadow: 0 4px 
+}
+
+#thankYouMessage h2 {
+    color: #4CAF50;
+}
+
+#thankYouMessage p {
+    font-size: 1.2rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0;
+        border-top: 1px solid #444;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header, nav, main, footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: left;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 0;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #about, #services {
+        padding: 2rem 1rem;
+    }
+}
